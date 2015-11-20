@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Moda</string>
+    <string name="button1">Salvar</string>
+    <string name="button2">Ver Lista</string>
+    <string name="lista_Roupas">Lista de Roupas</string>
+    <string name="title_activity_altera_roupa">Altera Roupa</string>
+    <string name="listagem_roupas">roupas</string>
+</resources>
