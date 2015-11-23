@@ -50,14 +50,6 @@ public class Roupa {
         this.tamanho = tamanho;
     }
 
-    public void setPeca(long peca) {
-    }
 
-    public void setCor(long cor) {
-    }
-
-    public void getTamanho(long tamanho) {
-
-    }
 }
 

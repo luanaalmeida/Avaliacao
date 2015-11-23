@@ -4,5 +4,8 @@
     <string name="button2">Ver Lista</string>
     <string name="lista_Roupas">Lista de Roupas</string>
     <string name="title_activity_altera_roupa">Altera Roupa</string>
-    <string name="listagem_roupas">roupas</string>
+    <string name="listagem_roupas">Roupas</string>
+    <string name="Peca">Peça</string>
+    <string name="Cor">cor</string>
+    <string name="Tamanho">Tamanho</string>
 </resources>

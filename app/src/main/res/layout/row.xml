@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/row"
     android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+
+            <TextView
+                android:text="@string/Peca"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:id="@+id/txtPeca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/Cor"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:id="@+id/txtCor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/Tamanho"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:id="@+id/txtTamanho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+    </TableLayout>
 
 </LinearLayout>

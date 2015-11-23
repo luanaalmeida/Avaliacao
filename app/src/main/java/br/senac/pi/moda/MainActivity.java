@@ -2,14 +2,19 @@ package br.senac.pi.moda;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
+import java.util.List;
+
 import br.senac.pi.moda.domais.ListRoupaActivity;
+import br.senac.pi.moda.domais.Roupa;
 import br.senac.pi.moda.domais.RoupaDB;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,12 +26,10 @@ RoupaDB roupasDB;
         setContentView(R.layout.activity_main);
         roupasDB = new RoupaDB(this);
 
-        findViewById(R.id.bntListarRoupa).setOnClickListener(abrirListarRoupa());
+        findViewById(R.id.bntListarRoupa).setOnClickListener(abrirListarRoupas());
         findViewById(R.id.bntCadastrarRoupa).setOnClickListener(cadastrarRoupa());
     }
 
-    private View.OnClickListener abrirListarRoupa() {
-    }
 
     private View.OnClickListener cadastrarRoupa() {
         return new View.OnClickListener() {
@@ -50,23 +53,20 @@ RoupaDB roupasDB;
 //banco SQLite
                 long id = database.insert("roupa", null, values);
                 if (id != 0){
-                    Toast.makeText(getApplicationContext(), getString(R.string.sucesso), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.button1), Toast.LENGTH_LONG).show();
                     edtPeca.setText("");
                     edtCor.setText("");
                     edtTamanho.setText("");
 
                     edtPeca.requestFocus();
                 }else {
-                    Toast.makeText(getApplicationContext(),getString(R.string.error), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),getString(R.string.button1), Toast.LENGTH_SHORT).show();
                 }
             }
         };
     }
 
-
-
-
-    private View.OnClickListener abrirListarCarros() {
+    private View.OnClickListener abrirListarRoupas() {
         return new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this, ListRoupaActivity.class);

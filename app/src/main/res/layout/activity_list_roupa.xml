@@ -6,7 +6,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="br.senac.pi.moda.domais.ListRoupaActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#f7e6fc">
 
     <TextView
         android:text="@string/listagem_roupas"
