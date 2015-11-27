@@ -8,4 +8,6 @@
     <string name="Peca">Peça</string>
     <string name="Cor">cor</string>
     <string name="Tamanho">Tamanho</string>
+    <string name="error">Erro no Banco</string>
+    <string name="sucesso">sucesso</string>
 </resources>

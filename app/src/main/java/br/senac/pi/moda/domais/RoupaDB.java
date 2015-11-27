@@ -31,7 +31,7 @@ public class RoupaDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         Log.d(TAG, "Criação da tabela Roupa");
-        db.execSQL("CREATE TABLE IF NOT EXISTS roupa (_id integer primary key autoincrement," + "peca text, Cor text, Tamanho Text);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS roupa(_id integer primary key autoincrement, peca text, cor text, tamanho text);");
         Log.d(TAG, "Tabela de Roupa criada com sucesso");
     }
 
@@ -42,14 +42,14 @@ public class RoupaDB extends SQLiteOpenHelper {
 
     public List<Roupa> FindAli(){
         SQLiteDatabase db = getWritableDatabase();
-        try {
+        try{
+            //SELECT * FROM carro;
             Cursor cursor = db.query("roupa", null, null, null, null, null, null, null);
+            return toList(cursor);
         }finally {
             db.close();
-
+        }
     }
-    }
-
         private List<Roupa> toList (Cursor cursor){
             List<Roupa> roupas = new ArrayList<Roupa>();
             if (cursor.moveToFirst()) {
@@ -57,9 +57,9 @@ public class RoupaDB extends SQLiteOpenHelper {
                     Roupa roupa = new Roupa();
                     roupas.add(roupa);
                     roupa.setId(cursor.getLong(cursor.getColumnIndex("_id")));
-                    roupa.setPeca(cursor.getString(cursor.getColumnIndex("Peca")));
-                    roupa.setCor(cursor.getString(cursor.getColumnIndex("Cor")));
-                    roupa.setTamanho(cursor.getString(cursor.getColumnIndex("Tamanho")));
+                    roupa.setPeca(cursor.getString(cursor.getColumnIndex("peca")));
+                    roupa.setCor(cursor.getString(cursor.getColumnIndex("cor")));
+                    roupa.setTamanho(cursor.getString(cursor.getColumnIndex("tamanho")));
 
                 } while (cursor.moveToNext());
             }

@@ -53,14 +53,14 @@ RoupaDB roupasDB;
 //banco SQLite
                 long id = database.insert("roupa", null, values);
                 if (id != 0){
-                    Toast.makeText(getApplicationContext(), getString(R.string.button1), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.sucesso), Toast.LENGTH_LONG).show();
                     edtPeca.setText("");
                     edtCor.setText("");
                     edtTamanho.setText("");
 
                     edtPeca.requestFocus();
                 }else {
-                    Toast.makeText(getApplicationContext(),getString(R.string.button1), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),getString(R.string.error), Toast.LENGTH_SHORT).show();
                 }
             }
         };

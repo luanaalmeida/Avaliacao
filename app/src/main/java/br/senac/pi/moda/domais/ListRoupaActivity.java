@@ -37,18 +37,24 @@ public class ListRoupaActivity extends AppCompatActivity {
 
     private View.OnClickListener AbrirListarRoupas() {
         return new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
-                Cursor roupas = database.query("roupa", campos, null, null, null, null, null);
-                if (roupas.getCount() > 0) {
-                    dataSource = new SimpleCursorAdapter(ListRoupaActivity.this, R.layout.row, roupas, campos, new int[]{R.id.txtPeca, R.id.txtCor, R.id.txtTamanho});
+                Cursor roupas = database.query("roupa", campos , null, null, null, null, null);
+                if (roupas.getCount()>0){
+                    dataSource = new SimpleCursorAdapter(ListRoupaActivity.this, R.layout.row , roupas, campos, new int[]{R.id.txtPeca, R.id.txtCor, R.id.txtTamanho}, 0);
                     listView.setAdapter(dataSource);
-                } /*else {
-                    Toast.makeText(ListRoupaActivity.this, getString(R.string.erro), Toast.LENGTH_LONG).show();
-                }*/
+                }else {
+                    Toast.makeText(ListRoupaActivity.this, getString(R.string.error), Toast.LENGTH_LONG).show();
+                }
             }
-
-
         };
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        database.close();
     }
 }
