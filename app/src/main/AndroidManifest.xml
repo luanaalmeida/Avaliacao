@@ -15,10 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".domais.ListRoupaActivity" >
+        <activity android:name=".ListRoupaActivity" >
         </activity>
         <activity
-            android:name=".domais.AlteraRoupa"
+            android:name=".AlteraRoupa"
             android:label="@string/title_activity_altera_roupa"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>

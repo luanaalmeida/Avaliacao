@@ -2,19 +2,13 @@ package br.senac.pi.moda;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-import java.util.List;
-
-import br.senac.pi.moda.domais.ListRoupaActivity;
-import br.senac.pi.moda.domais.Roupa;
 import br.senac.pi.moda.domais.RoupaDB;
 
 public class MainActivity extends AppCompatActivity {

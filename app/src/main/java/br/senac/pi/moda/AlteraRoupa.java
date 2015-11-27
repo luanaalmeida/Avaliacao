@@ -1,4 +1,4 @@
-package br.senac.pi.moda.domais;
+package br.senac.pi.moda;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

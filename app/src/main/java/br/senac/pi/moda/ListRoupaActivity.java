@@ -1,6 +1,5 @@
-package br.senac.pi.moda.domais;
+package br.senac.pi.moda;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -11,10 +10,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-import java.security.acl.AclNotFoundException;
-
-import br.senac.pi.moda.R;
-
+import br.senac.pi.moda.domais.RoupaDB;
 
 
 public class ListRoupaActivity extends AppCompatActivity {
